@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Como eu fiz — Rabo Aceso</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="brand">
+    <span class="brand-mark">Rabo Aceso</span>
+    <span class="brand-tail" aria-hidden="true">🐾</span>
+  </a>
+  <nav class="site-nav">
+    <a href="index.html">Loja</a>
+    <a href="como-fiz.html">Como eu fiz</a>
+  </nav>
+</header>
+
+<div class="page">
+  <a href="index.html" class="back-link">← voltar pra loja</a>
+  <h1>Como eu fiz essa loja</h1>
+  <p class="kicker">Desafio Bootcamp AI/R — Trilha Commerce, agosto/2026</p>
+
+  <!--
+    SUBSTITUA o src abaixo pelo embed do seu vídeo (YouTube não listado ou Loom).
+    YouTube: https://www.youtube.com/embed/SEU_ID_AQUI
+    Loom:    https://www.loom.com/embed/SEU_ID_AQUI
+  -->
+  <div class="video-frame">
+    <iframe
+      src="https://www.youtube.com/embed/SEU_ID_AQUI"
+      title="Explicação da loja Rabo Aceso"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <section>
+    <h2>O que é isso</h2>
+    <p>Rabo Aceso é uma mini-loja de artigos pra pets, construída como site estático — sem back-end, sem banco de dados. Tudo o que existe é HTML, CSS, JavaScript e um arquivo de dados.</p>
+  </section>
+
+  <section>
+    <h2>Arquitetura de arquivos</h2>
+    <ul class="stack">
+      <li><strong>index.html</strong> — estrutura da vitrine: cabeçalho, hero e os contêineres vazios que o JS preenche.</li>
+      <li><strong>products.json</strong> — o catálogo. Cada produto é um objeto com id, nome, categoria, preço, ícone e descrição.</li>
+      <li><strong>script.js</strong> — busca o JSON com <code>fetch</code>, filtra por categoria/texto e desenha os cards no DOM.</li>
+      <li><strong>styles.css</strong> — identidade visual: cores, tipografia, grid responsivo.</li>
+      <li><strong>como-fiz.html</strong> — esta página.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Por que separar o catálogo do front (headless commerce)</h2>
+    <p>Nenhum produto está escrito dentro do HTML. A vitrine só sabe pedir "me dá a lista de produtos" e desenhar o que receber — ela não sabe, de antemão, quantos produtos existem ou quais são. Isso é o miolo do conceito de headless commerce: separar onde os dados moram (o "corpo", que numa loja real seria uma API/CMS) de como eles aparecem (a "cabeça", aqui o HTML/CSS/JS). Trocar o catálogo inteiro nunca exige tocar em uma linha de JavaScript.</p>
+  </section>
+
+  <section>
+    <h2>Se fosse pra AWS</h2>
+    <p>Hoje o fetch busca um arquivo estático hospedado ao lado do site. Numa versão AWS, o navegador do cliente bateria numa CDN (CloudFront) que serve os arquivos estáticos direto de um bucket S3 — e o products.json viraria uma chamada de API (API Gateway + Lambda, lendo de um banco tipo DynamoDB) em vez de um arquivo fixo. O cache do CloudFront é o que evita que 10 mil acessos simultâneos cheguem todos na origem: a maioria é respondida direto na borda, perto do usuário.</p>
+  </section>
+
+  <section>
+    <h2>Bônus: onde entraria um BFF</h2>
+    <p>Se essa loja ganhasse um app mobile, um Backend for Frontend (BFF) entraria entre o app e as APIs internas — uma camada só pra moldar e agregar dados especificamente pro formato que o app mobile precisa, diferente do que o site web consome. Evita que o cliente mobile tenha que fazer várias chamadas separadas ou lidar com payloads pensados pra web.</p>
+    <svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border:1px solid var(--line);border-radius:4px;background:var(--paper-raised)">
+      <style>
+        .box{fill:var(--paper);stroke:#16241f;stroke-width:1.5}
+        .bff{fill:#e2a53a;stroke:#16241f;stroke-width:1.5}
+        .lbl{font-family:'Work Sans',sans-serif;font-size:13px;fill:#16241f}
+        .sub{font-family:'Work Sans',sans-serif;font-size:10.5px;fill:#3a4a43}
+        .arr{stroke:#3a4a43;stroke-width:1.5;fill:none;marker-end:url(#ah)}
+      </style>
+      <defs>
+        <marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#3a4a43"/>
+        </marker>
+      </defs>
+
+      <rect class="box" x="20" y="30" width="120" height="50" rx="4"/>
+      <text class="lbl" x="80" y="52" text-anchor="middle">Site web</text>
+      <text class="sub" x="80" y="67" text-anchor="middle">este projeto</text>
+
+      <rect class="box" x="20" y="200" width="120" height="50" rx="4"/>
+      <text class="lbl" x="80" y="222" text-anchor="middle">App mobile</text>
+      <text class="sub" x="80" y="237" text-anchor="middle">futuro</text>
+
+      <rect class="bff" x="220" y="200" width="140" height="50" rx="4"/>
+      <text class="lbl" x="290" y="222" text-anchor="middle">BFF mobile</text>
+      <text class="sub" x="290" y="237" text-anchor="middle">molda os dados p/ o app</text>
+
+      <rect class="box" x="480" y="30" width="140" height="50" rx="4"/>
+      <text class="lbl" x="550" y="52" text-anchor="middle">CDN (cache)</text>
+      <text class="sub" x="550" y="67" text-anchor="middle">CloudFront</text>
+
+      <rect class="box" x="480" y="115" width="140" height="50" rx="4"/>
+      <text class="lbl" x="550" y="137" text-anchor="middle">API produtos</text>
+      <text class="sub" x="550" y="152" text-anchor="middle">API Gateway + Lambda</text>
+
+      <rect class="box" x="480" y="200" width="140" height="50" rx="4"/>
+      <text class="lbl" x="550" y="222" text-anchor="middle">Banco</text>
+      <text class="sub" x="550" y="237" text-anchor="middle">DynamoDB</text>
+
+      <path class="arr" d="M140,55 L480,55"/>
+      <path class="arr" d="M140,225 L220,225"/>
+      <path class="arr" d="M360,215 L480,150"/>
+      <path class="arr" d="M550,165 L550,200"/>
+    </svg>
+  </section>
+
+  <section>
+    <h2>Stack</h2>
+    <ul class="stack">
+      <li>HTML5 + CSS puro (sem framework)</li>
+      <li>JavaScript vanilla (fetch, sem bibliotecas)</li>
+      <li>Hospedagem: GitHub Pages (gratuito)</li>
+    </ul>
+  </section>
+</div>
+
+</body>
+</html>

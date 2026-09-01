@@ -1,0 +1,110 @@
+[
+  {
+    "id": "p01",
+    "name": "Ração Focinho Feliz Frango 15kg",
+    "category": "racao",
+    "price": 189.90,
+    "icon": "🍗",
+    "badge": "mais vendido",
+    "description": "Ração premium para cães adultos, sem corante artificial. Pacote de 15kg."
+  },
+  {
+    "id": "p02",
+    "name": "Petisco Sardinha Crocante",
+    "category": "racao",
+    "price": 24.50,
+    "icon": "🐟",
+    "badge": null,
+    "description": "Petisco natural desidratado, ótimo pra treino e recompensa."
+  },
+  {
+    "id": "p03",
+    "name": "Bolinha Maluca Anti-Tédio",
+    "category": "brinquedos",
+    "price": 39.90,
+    "icon": "🎾",
+    "badge": "novo",
+    "description": "Bola com movimento imprevisível, mantém o pet ativo sozinho."
+  },
+  {
+    "id": "p04",
+    "name": "Ratinho de Feltro pra Gato",
+    "category": "brinquedos",
+    "price": 18.00,
+    "icon": "🐭",
+    "badge": null,
+    "description": "Kit com 3 ratinhos recheados de erva-de-gato."
+  },
+  {
+    "id": "p05",
+    "name": "Shampoo Pelo Macio Neutro",
+    "category": "higiene",
+    "price": 32.90,
+    "icon": "🧴",
+    "badge": null,
+    "description": "Fórmula hipoalergênica, segura pra banhos semanais."
+  },
+  {
+    "id": "p06",
+    "name": "Escova Removedora de Pelo",
+    "category": "higiene",
+    "price": 45.00,
+    "icon": "🪮",
+    "badge": "promoção",
+    "description": "Cerdas de silicone, reduz queda de pelo em até 90%."
+  },
+  {
+    "id": "p07",
+    "name": "Coleira Trilha Refletiva M",
+    "category": "acessorios",
+    "price": 52.90,
+    "icon": "🦮",
+    "badge": null,
+    "description": "Ajustável, com fivela de engate rápido e fita refletiva."
+  },
+  {
+    "id": "p08",
+    "name": "Comedouro Duplo Inox",
+    "category": "acessorios",
+    "price": 68.00,
+    "icon": "🥣",
+    "badge": null,
+    "description": "Base antiderrapante, fácil de higienizar, dois compartimentos."
+  },
+  {
+    "id": "p09",
+    "name": "Caminha Nuvem Ortopédica G",
+    "category": "camas",
+    "price": 249.90,
+    "icon": "🛏️",
+    "badge": "mais vendido",
+    "description": "Espuma de memória, alivia articulações de pets idosos."
+  },
+  {
+    "id": "p10",
+    "name": "Manta Térmica Inverno",
+    "category": "camas",
+    "price": 59.90,
+    "icon": "🧣",
+    "badge": null,
+    "description": "Fleece macio, lavável, ideal pra dias frios."
+  },
+  {
+    "id": "p11",
+    "name": "Vermífugo Oral Cães e Gatos",
+    "category": "saude",
+    "price": 41.50,
+    "icon": "💊",
+    "badge": null,
+    "description": "Dose única, combate os principais vermes intestinais."
+  },
+  {
+    "id": "p12",
+    "name": "Suplemento Pele e Pelo",
+    "category": "saude",
+    "price": 78.90,
+    "icon": "🧪",
+    "badge": "novo",
+    "description": "Ômega 3 e biotina, pelagem mais brilhante em 30 dias."
+  }
+]

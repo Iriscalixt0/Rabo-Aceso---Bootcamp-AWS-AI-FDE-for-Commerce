@@ -1,0 +1,191 @@
+
+
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as IndexRouteImport } from './routes/index'
+import { Route as AssinaturaRouteImport } from './routes/assinatura'
+import { Route as CarrinhoRouteImport } from './routes/carrinho'
+import { Route as CheckoutRouteImport } from './routes/checkout'
+import { Route as ComoFizRouteImport } from './routes/como-fiz'
+import { Route as ContaRouteImport } from './routes/conta'
+import { Route as EntrarRouteImport } from './routes/entrar'
+
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AssinaturaRoute = AssinaturaRouteImport.update({
+  id: '/assinatura',
+  path: '/assinatura',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CarrinhoRoute = CarrinhoRouteImport.update({
+  id: '/carrinho',
+  path: '/carrinho',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CheckoutRoute = CheckoutRouteImport.update({
+  id: '/checkout',
+  path: '/checkout',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComoFizRoute = ComoFizRouteImport.update({
+  id: '/como-fiz',
+  path: '/como-fiz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContaRoute = ContaRouteImport.update({
+  id: '/conta',
+  path: '/conta',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EntrarRoute = EntrarRouteImport.update({
+  id: '/entrar',
+  path: '/entrar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+
+export interface FileRoutesByFullPath {
+  '/': typeof IndexRoute
+  '/assinatura': typeof AssinaturaRoute
+  '/carrinho': typeof CarrinhoRoute
+  '/checkout': typeof CheckoutRoute
+  '/como-fiz': typeof ComoFizRoute
+  '/conta': typeof ContaRoute
+  '/entrar': typeof EntrarRoute
+}
+export interface FileRoutesByTo {
+  '/': typeof IndexRoute
+  '/assinatura': typeof AssinaturaRoute
+  '/carrinho': typeof CarrinhoRoute
+  '/checkout': typeof CheckoutRoute
+  '/como-fiz': typeof ComoFizRoute
+  '/conta': typeof ContaRoute
+  '/entrar': typeof EntrarRoute
+}
+export interface FileRoutesById {
+  __root__: typeof rootRouteImport
+  '/': typeof IndexRoute
+  '/assinatura': typeof AssinaturaRoute
+  '/carrinho': typeof CarrinhoRoute
+  '/checkout': typeof CheckoutRoute
+  '/como-fiz': typeof ComoFizRoute
+  '/conta': typeof ContaRoute
+  '/entrar': typeof EntrarRoute
+}
+export interface FileRouteTypes {
+  fileRoutesByFullPath: FileRoutesByFullPath
+  fullPaths:
+    | '/'
+    | '/assinatura'
+    | '/carrinho'
+    | '/checkout'
+    | '/como-fiz'
+    | '/conta'
+    | '/entrar'
+  fileRoutesByTo: FileRoutesByTo
+  to:
+    | '/'
+    | '/assinatura'
+    | '/carrinho'
+    | '/checkout'
+    | '/como-fiz'
+    | '/conta'
+    | '/entrar'
+  id:
+    | '__root__'
+    | '/'
+    | '/assinatura'
+    | '/carrinho'
+    | '/checkout'
+    | '/como-fiz'
+    | '/conta'
+    | '/entrar'
+  fileRoutesById: FileRoutesById
+}
+export interface RootRouteChildren {
+  IndexRoute: typeof IndexRoute
+  AssinaturaRoute: typeof AssinaturaRoute
+  CarrinhoRoute: typeof CarrinhoRoute
+  CheckoutRoute: typeof CheckoutRoute
+  ComoFizRoute: typeof ComoFizRoute
+  ContaRoute: typeof ContaRoute
+  EntrarRoute: typeof EntrarRoute
+}
+
+declare module '@tanstack/react-router' {
+  interface FileRoutesByPath {
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/assinatura': {
+      id: '/assinatura'
+      path: '/assinatura'
+      fullPath: '/assinatura'
+      preLoaderRoute: typeof AssinaturaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/carrinho': {
+      id: '/carrinho'
+      path: '/carrinho'
+      fullPath: '/carrinho'
+      preLoaderRoute: typeof CarrinhoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/checkout': {
+      id: '/checkout'
+      path: '/checkout'
+      fullPath: '/checkout'
+      preLoaderRoute: typeof CheckoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/como-fiz': {
+      id: '/como-fiz'
+      path: '/como-fiz'
+      fullPath: '/como-fiz'
+      preLoaderRoute: typeof ComoFizRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/conta': {
+      id: '/conta'
+      path: '/conta'
+      fullPath: '/conta'
+      preLoaderRoute: typeof ContaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/entrar': {
+      id: '/entrar'
+      path: '/entrar'
+      fullPath: '/entrar'
+      preLoaderRoute: typeof EntrarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+  }
+}
+
+const rootRouteChildren: RootRouteChildren = {
+  IndexRoute: IndexRoute,
+  AssinaturaRoute: AssinaturaRoute,
+  CarrinhoRoute: CarrinhoRoute,
+  CheckoutRoute: CheckoutRoute,
+  ComoFizRoute: ComoFizRoute,
+  ContaRoute: ContaRoute,
+  EntrarRoute: EntrarRoute,
+}
+export const routeTree = rootRouteImport
+  ._addFileChildren(rootRouteChildren)
+  ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

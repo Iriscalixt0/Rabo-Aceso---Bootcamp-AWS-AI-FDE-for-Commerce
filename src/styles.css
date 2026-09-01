@@ -1,0 +1,131 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+
+
+@theme inline {
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-brick: var(--brick);
+  --color-mustard: var(--mustard);
+  --color-mustard-foreground: var(--mustard-foreground);
+  --color-brick-foreground: var(--brick-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --shadow-card: 0 1px 0 0 color-mix(in oklab, var(--foreground) 10%, transparent);
+  --shadow-lift: 0 18px 40px -24px color-mix(in oklab, var(--primary) 55%, transparent);
+}
+
+:root {
+  --radius: 0.375rem;
+  /* Rabo Aceso — verde-pinho, mostarda, vermelho-tijolo */
+  --background: oklch(0.976 0.014 92);
+  --foreground: oklch(0.245 0.036 152);
+  --card: oklch(0.993 0.008 92);
+  --card-foreground: oklch(0.245 0.036 152);
+  --popover: oklch(0.993 0.008 92);
+  --popover-foreground: oklch(0.245 0.036 152);
+  --primary: oklch(0.312 0.055 155);
+  --primary-foreground: oklch(0.975 0.02 92);
+  --secondary: oklch(0.93 0.032 92);
+  --secondary-foreground: oklch(0.312 0.055 155);
+  --muted: oklch(0.945 0.021 92);
+  --muted-foreground: oklch(0.48 0.03 140);
+  --accent: oklch(0.795 0.145 82);
+  --accent-foreground: oklch(0.245 0.05 90);
+  --mustard: oklch(0.767 0.135 78);
+  --mustard-foreground: oklch(0.245 0.036 152);
+  --brick: oklch(0.512 0.145 33);
+  --brick-foreground: oklch(0.975 0.02 92);
+  --destructive: oklch(0.512 0.145 33);
+  --destructive-foreground: oklch(0.975 0.02 92);
+  --border: oklch(0.885 0.026 92);
+  --input: oklch(0.885 0.026 92);
+  --ring: oklch(0.512 0.145 33);
+  --chart-1: oklch(0.312 0.055 155);
+  --chart-2: oklch(0.795 0.145 82);
+  --chart-3: oklch(0.512 0.145 33);
+  --chart-4: oklch(0.6 0.06 150);
+  --chart-5: oklch(0.7 0.09 60);
+  --sidebar: oklch(0.945 0.021 92);
+  --sidebar-foreground: oklch(0.245 0.036 152);
+  --sidebar-primary: oklch(0.312 0.055 155);
+  --sidebar-primary-foreground: oklch(0.975 0.02 92);
+  --sidebar-accent: oklch(0.795 0.145 82);
+  --sidebar-accent-foreground: oklch(0.245 0.05 90);
+  --sidebar-border: oklch(0.885 0.026 92);
+  --sidebar-ring: oklch(0.512 0.145 33);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01";
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-variation-settings:
+      "SOFT" 40,
+      "WONK" 1;
+    letter-spacing: -0.02em;
+  }
+}
+
+@utility text-balance-tight {
+  text-wrap: balance;
+}
+
+@keyframes wag {
+  0%,
+  100% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(12deg);
+  }
+}

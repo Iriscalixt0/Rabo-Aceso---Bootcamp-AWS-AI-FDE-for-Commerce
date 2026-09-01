@@ -1,0 +1,162 @@
+[
+  {
+    "id": "p01",
+    "name": "Ração Focinho Feliz Frango 15kg",
+    "category": "racao",
+    "price": 189.9,
+    "icon": "🍗",
+    "badge": "mais vendido",
+    "description": "Ração premium para cães adultos, sem corante artificial. Pacote de 15kg.",
+    "image": "/products/p01.jpg"
+  },
+  {
+    "id": "p02",
+    "name": "Petisco Sardinha Crocante",
+    "category": "racao",
+    "price": 24.5,
+    "icon": "🐟",
+    "badge": null,
+    "description": "Petisco natural desidratado, ótimo pra treino e recompensa.",
+    "image": "/products/p02.jpg"
+  },
+  {
+    "id": "p03",
+    "name": "Bolinha Maluca Anti-Tédio",
+    "category": "brinquedos",
+    "price": 39.9,
+    "icon": "🎾",
+    "badge": "novo",
+    "description": "Bola com movimento imprevisível, mantém o pet ativo sozinho.",
+    "image": "/products/p03.jpg"
+  },
+  {
+    "id": "p04",
+    "name": "Ratinho de Feltro pra Gato",
+    "category": "brinquedos",
+    "price": 18.0,
+    "icon": "🐭",
+    "badge": null,
+    "description": "Kit com 3 ratinhos recheados de erva-de-gato.",
+    "image": "/products/p04.jpg"
+  },
+  {
+    "id": "p05",
+    "name": "Shampoo Pelo Macio Neutro",
+    "category": "higiene",
+    "price": 32.9,
+    "icon": "🧴",
+    "badge": null,
+    "description": "Fórmula hipoalergênica, segura pra banhos semanais.",
+    "image": "/products/p05.jpg"
+  },
+  {
+    "id": "p06",
+    "name": "Escova Removedora de Pelo",
+    "category": "higiene",
+    "price": 45.0,
+    "icon": "🪮",
+    "badge": "promoção",
+    "description": "Cerdas de silicone, reduz queda de pelo em até 90%.",
+    "image": "/products/p06.jpg"
+  },
+  {
+    "id": "p07",
+    "name": "Coleira Trilha Refletiva M",
+    "category": "acessorios",
+    "price": 52.9,
+    "icon": "🦮",
+    "badge": null,
+    "description": "Ajustável, com fivela de engate rápido e fita refletiva.",
+    "image": "/products/p07.jpg"
+  },
+  {
+    "id": "p08",
+    "name": "Comedouro Duplo Inox",
+    "category": "acessorios",
+    "price": 68.0,
+    "icon": "🥣",
+    "badge": null,
+    "description": "Base antiderrapante, fácil de higienizar, dois compartimentos.",
+    "image": "/products/p08.jpg"
+  },
+  {
+    "id": "p09",
+    "name": "Caminha Nuvem Ortopédica G",
+    "category": "camas",
+    "price": 249.9,
+    "icon": "🛏️",
+    "badge": "mais vendido",
+    "description": "Espuma de memória, alivia articulações de pets idosos.",
+    "image": "/products/p09.jpg"
+  },
+  {
+    "id": "p10",
+    "name": "Manta Térmica Inverno",
+    "category": "camas",
+    "price": 59.9,
+    "icon": "🧣",
+    "badge": null,
+    "description": "Fleece macio, lavável, ideal pra dias frios.",
+    "image": "/products/p10.jpg"
+  },
+  {
+    "id": "p11",
+    "name": "Vermífugo Oral Cães e Gatos",
+    "category": "saude",
+    "price": 41.5,
+    "icon": "💊",
+    "badge": null,
+    "description": "Dose única, combate os principais vermes intestinais.",
+    "image": "/products/p11.jpg"
+  },
+  {
+    "id": "p12",
+    "name": "Suplemento Pele e Pelo",
+    "category": "saude",
+    "price": 78.9,
+    "icon": "🧪",
+    "badge": "novo",
+    "description": "Ômega 3 e biotina, pelagem mais brilhante em 30 dias.",
+    "image": "/products/p12.jpg"
+  },
+  {
+    "id": "p13",
+    "name": "Bifinho de Frango Natural 500g",
+    "category": "petiscos",
+    "price": 29.9,
+    "icon": "🍗",
+    "badge": "leve 3, pague 2",
+    "description": "Bifinhos desidratados de frango, sem conservantes. Promoção leve 3, pague 2.",
+    "image": "/products/p13.jpg"
+  },
+  {
+    "id": "p14",
+    "name": "Dental Stick Hálito Fresco 7un",
+    "category": "petiscos",
+    "price": 34.9,
+    "icon": "🦴",
+    "badge": "leve 3, pague 2",
+    "description": "Palitos dentais que ajudam a reduzir tártaro e o mau hálito. Promoção leve 3, pague 2.",
+    "image": "/products/p14.jpg"
+  },
+  {
+    "id": "p15",
+    "name": "Petisco Macio pra Gato Salmão 60g",
+    "category": "petiscos",
+    "price": 19.9,
+    "icon": "🐟",
+    "badge": "leve 3, pague 2",
+    "description": "Petisco macio sabor salmão, ideal pra recompensa felina. Promoção leve 3, pague 2.",
+    "image": "/products/p15.jpg"
+  },
+  {
+    "id": "p16",
+    "name": "Biscoito Natural Amendoim 300g",
+    "category": "petiscos",
+    "price": 26.5,
+    "icon": "🍪",
+    "badge": "leve 3, pague 2",
+    "description": "Biscoitos assados com amendoim, sem açúcar. Promoção leve 3, pague 2.",
+    "image": "/products/p16.jpg"
+  }
+]
