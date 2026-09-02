@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { Page } from "@/components/StoreChrome";
 
-const VIDEO_EMBED_URL = "https://youtu.be/QnLHFwRTioU";
+const VIDEO_EMBED_URL = "https://www.youtube.com/embed/QnLHFwRTioU";
 
 export const Route = createFileRoute("/como-fiz")({
   head: () => ({
