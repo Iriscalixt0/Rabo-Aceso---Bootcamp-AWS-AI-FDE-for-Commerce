@@ -4,8 +4,8 @@ Loja fictícia criada para o desafio de bootcamp **"Minha Loja no Ar"** (Trilha 
 AI/R, agosto/2026). O catálogo vive num arquivo JSON separado do front (abordagem
 *headless commerce*) e a vitrine consome esse arquivo via `fetch`.
 
-**🔗 Loja no ar:** [SUA_URL_PUBLICADA_AQUI](https://SUA_URL_PUBLICADA_AQUI)
-**🎥 Vídeo explicando o projeto:** veja a página [`/como-fiz`](https://SUA_URL_PUBLICADA_AQUI/como-fiz)
+**🔗 Loja no ar:** [rabo-aceso-bootcamp-aws-ai-fde.vercel.app](https://rabo-aceso-bootcamp-aws-ai-fde.vercel.app/)
+**🎥 Vídeo explicando o projeto:** veja a página [`/como-fiz`](https://rabo-aceso-bootcamp-aws-ai-fde.vercel.app/como-fiz)
 
 ---
 
@@ -38,7 +38,7 @@ Gera o build no formato esperado pela [Vercel](https://vercel.com) (Build Output
 pasta `.vercel/output`), pronto pra deploy zero-config — basta conectar o
 repositório no dashboard da Vercel ou rodar `vercel deploy` na raiz do projeto.
 
-## Mapa do projeto (em português simples)
+## Mapa do projeto
 
 | Onde                                   | O que é                                                                             |
 | --------------------------------------- | ------------------------------------------------------------------------------------- |
@@ -95,4 +95,4 @@ Para testar tudo sem criar conta: **avaliador@raboaceso.com** / senha **bootcamp
 Projeto individual do Bootcamp AI/R — Trilha Commerce. Requisitos: catálogo headless
 via JSON, busca/filtro na vitrine, hospedagem pública gratuita e uma página `/como-fiz`
 explicando as decisões técnicas em vídeo. Veja o detalhamento completo em
-[`/como-fiz`](https://SUA_URL_PUBLICADA_AQUI/como-fiz).
+[`/como-fiz`](https://rabo-aceso-bootcamp-aws-ai-fde.vercel.app/como-fiz).
